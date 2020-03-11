@@ -1,0 +1,46 @@
+<%- include('../_layouts/adminheader') %>
+
+
+<h2 class="page-title">Account Management</h2>
+
+<br><br>
+
+<% if (count > 0) { %>
+
+<table class="table table-striped alignmiddle">
+
+    <thead>
+        <tr class="home">
+            <th>Name</th>
+            <th>Username</th>
+            <th>email</th>
+            <th>Admin</th>
+            <th>Doctor</th>
+            <th>client</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <% accounts.forEach(function(account){ %>
+        <tr>
+            <td><%= account.name %></td>
+            <td><%= account.username %></td>
+            <td><%= account.email %></td>
+            <td><%= account.admin %></td>
+            <td><%= account.doctor %></td>
+            <td><%= account.client %></td>
+            
+            <!--
+                <td><a href="/admin/accounts/edit-account/<%= account._id %>">Edit</a></td>
+            <td><a class="confirmDeletion" href="/admin/accounts/delete-account/<%= account._id %>">Delete</a></td>
+            -->
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<% } else {%>
+<h3 class="text-center">There are no Accounts</h3>
+<% }%>
+
+<%- include('../_layouts/adminfooter') %>

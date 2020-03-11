@@ -1,0 +1,19 @@
+<%- include('_layouts/header') -%>
+
+<div id="index_header">
+   <div>
+    <div class="col-xs-12 col-md-3">
+        <h3>Nurseries</h3>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="/products/all-products">All Infants</a></li>
+            <% categories.forEach(function(c){ %>
+                <li class="list-group-item"><a href="/products/<%= c.slug %>"><%= c.title %></a></li>
+            <% }); %>
+        </ul>
+    </div>
+   </div>
+</div>
+
+<%- include('_layouts/footer') -%>
+
+

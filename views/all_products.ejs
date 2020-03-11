@@ -1,0 +1,41 @@
+<% include _layouts/header %>
+<!--class="row products container_products" id="cat-pro"-->
+
+    <div id="all_products">
+        <div class="row products" id="container_top">
+    
+            <% products.forEach(function(p){ %>
+                   <div class="col-12 col-md-3 col-lg-3 col-xs-6" id="container_allproducts">
+                    <div class="card">
+    
+    
+                        <div class="img-container">
+                        
+                        <a class="pa"  href="/products/<%= p.category %>/<%= p.slug %>">
+                             <img class="card-img-top img-responsive"src="/product_images/<%= p.id %>/<%= p.image %>" alt="">
+                         </a>
+                        </div>
+    
+    
+                        <div class="card-footer d-flex justify-content-between">
+                         <h6 style="font-weight: bold; font-family: 'Oswald';"><%= p.title %></h6>
+                        </div>
+                        
+    
+                        <div>
+                            <h6 style="font-weight: bold; font-family: 'Oswald';">Temperature: <%= p.temperature %> degrees celcius</h6>
+                            <h6 style="font-weight: bold; font-family: 'Oswald';">Humidity: <%= p.humidity %> %</h6>
+                            <h6 style="font-weight: bold; font-family: 'Oswald';">Heart Rate: <%= p.heart %> BPM</h6>
+                             
+                         </div>
+                    </div>
+                   </div>
+                       
+                   
+                   
+                <% }); %>
+            
+        </div>
+    </div>
+
+    <% include _layouts/footer %>

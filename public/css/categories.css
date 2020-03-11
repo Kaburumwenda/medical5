@@ -1,0 +1,32 @@
+.card{
+   
+   display: flex;
+   flex-direction: column;
+   background-color: white;
+   margin: 10px 10px 10px 10px;
+   align-items: center;
+   align-items: center;
+    transition: all 1s linear;
+    box-shadow: 1px 1px 1px 1px #d9d9d9;
+    
+}
+.img-container{
+    position: relative;
+    overflow: hidden;
+}
+.card-img-top{
+    transition: all 1s linear;
+}
+
+.img-container:hover .card-img-top{
+    transform: scale(1.2);
+}
+.dis{
+    float: left;
+    color: orange;
+    background-color: #e6ffff;
+    font-size: 10px;
+}
+
+/*LOAD MORE CSS 
+*/

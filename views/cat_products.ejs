@@ -1,0 +1,72 @@
+<% include _layouts/header %>
+
+
+   <div id="cat_products">
+    <div class="row products"  id="container_cat cat-pro">
+    
+        <% products.forEach(function(p){ %>
+            <div class="col-12 col-md-3 col-lg-3 col-xs-6" id="container_allproducts">
+                <div class="card">
+
+
+                    <div class="img-container">
+                    
+                    <a class="pa"  href="/products/<%= p.category %>/<%= p.slug %>">
+                         <img class="card-img-top img-responsive"src="/product_images/<%= p.id %>/<%= p.image %>" alt="">
+                     </a>
+                    </div>
+
+
+                    <div class="card-footer d-flex justify-content-between">
+                     <h6 style="font-weight: bold; font-family: 'Oswald';"><%= p.title %></h6>
+                    </div>
+                    
+
+                    <div>
+                        <h6 style="font-weight: bold; font-family: 'Oswald';">Temperature: <%= p.temperature %> degrees celcius</h6>
+                        <h6 style="font-weight: bold; font-family: 'Oswald';">Humidity: <%= p.humidity %> %</h6>
+                        <h6 style="font-weight: bold; font-family: 'Oswald';">Heart Rate: <%= p.heart %> BPM</h6>
+                         
+                     </div>
+                </div>
+               </div>
+            <% }); %>
+        
+    </div>
+   </div>
+
+   
+
+<script>
+    $(function () {
+    $(".load").slice(0, 4).show();
+    $("#loadMore").on('click', function (e) {
+        e.preventDefault();
+        $(".load:hidden").slice(0, 4).slideDown();
+        if ($(".load:hidden").length == 0) {
+            $(".load").fadeOut('slow');
+        }
+        $('html,body').animate({
+            scrollTop: $(this).offset().top
+        }, 1500);
+    });
+});
+
+$('a[href=#top]').click(function () {
+    $('body,html').animate({
+        scrollTop: 0
+    }, 600);
+    return false;
+});
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+        $('.totop a').fadeIn();
+    } else {
+        $('.totop a').fadeOut();
+    }
+});
+</script>
+
+
+<% include _layouts/footer %>

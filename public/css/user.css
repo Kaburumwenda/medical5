@@ -1,0 +1,52 @@
+.register{
+    margin-top: 100px;
+}
+#all_products{
+    margin-top: 100px !important;
+}
+#cat_products{
+    margin-top: 100px !important;
+}
+.register img{
+    width: 120px;
+    height: 90px;
+    color: white;
+}
+
+
+.field-icon {
+    float: right;
+    margin-right: 20px;
+    font-size: 20px;
+    margin-left: -25px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .ui-autocomplete {
+    padding: 0;
+    list-style: none;
+    background-color: #fff;
+    width: 218px;
+    border: 1px solid #B0BECA;
+    max-height: 350px;
+    overflow-x: hidden;
+  }
+  .ui-autocomplete .ui-menu-item {
+    border-top: 1px solid #B0BECA;
+    display: block;
+    padding: 4px 6px;
+    color: #353D44;
+    cursor: pointer;
+  }
+  .ui-autocomplete .ui-menu-item:first-child {
+    border-top: none;
+  }
+  .ui-autocomplete .ui-menu-item.ui-state-focus {
+    background-color: #D5E5F4;
+    color: #161A1C;
+  }
+  
+
+

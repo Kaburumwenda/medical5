@@ -1,0 +1,44 @@
+<% include _layouts/header %>
+
+<div class="register">
+    <div>
+        <img src="/assests/login.png"/>
+    </div>
+    <h1><%= title %></h1>
+
+<form method="post" action="/users/login">
+    
+    <div class="form-group">
+        <label>Username</label>
+        <input type="text" name="username" class="form-control" placeholder="Username">
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input id="password-field" type="password" class="form-control" name="password" placeholder="Secret Password">
+        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+    </div
+    <br>
+
+    <button type="submit" class="btn btn-default btn-success">Log in</button>
+</form>
+<br>
+<div>
+    <p>Create  Account</p>
+    <p><a href="/users/register"><button class="btn btn-default btn-info">Register</button></a></p>
+</div>
+</div>
+
+<script>
+    $(".toggle-password").click(function() {
+
+$(this).toggleClass("fa-eye fa-eye-slash");
+var input = $($(this).attr("toggle"));
+if (input.attr("type") == "password") {
+  input.attr("type", "text");
+} else {
+  input.attr("type", "password");
+}
+});
+</script>
+<% include _layouts/footer %>

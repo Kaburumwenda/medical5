@@ -1,0 +1,202 @@
+/* header nav 
+*/
+.header_nav{
+    position: fixed !important;
+    z-index: 1;
+    width: 100%;
+}
+.cart_nav a{
+    color: rgb(187, 219, 70);
+    text-decoration: none;
+}
+.cart_nav a:hover{
+    color: orange;
+}
+.second-form input {
+    border-radius: 4px;
+    width: 100px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://i.postimg.cc/gjDmCnqx/search-512.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  
+  .first-form input:focus {
+    width: 50%;
+  }
+  .first-form input{
+    height: 30px;
+    border: 0.2px solid wheat;
+    margin-top: 10px;
+    width: 130px;
+    color: white;
+    border-radius: 10px;
+    background-color: #262626;
+}
+
+.contaner_two{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+.credetials{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    
+}
+.search_home{
+    
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    
+
+}
+.search_home input{
+    width: 450px;
+    border: transparent;
+}
+.form2{
+    display: flex;
+    
+
+}
+
+#header_top{
+    width: 100%;
+    height: 100px;
+    margin-top: 0px;
+    background-color:white;
+    position: fixed;
+    z-index: 1;
+}
+#header_top_nav{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+
+margin-bottom: 10px;
+}
+#header_top_nav input{
+    width: 500px;
+    border: 1px solid gray;
+    height: 40px;
+    border-radius: 5px;
+}
+.header-button{
+    border: transparent;
+    height: 40px;
+}
+.mesh_home{
+    margin-right: 70px;
+    font-size: 30px;
+   
+}
+.mesh_home a{
+    text-decoration: none;
+    font-family: 'Trade Winds', cursive;
+}
+.mesh_home a:hover{
+    color: orange;
+}
+.header_acc{
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.header_acc a{
+    font-size: 15px;
+    text-decoration: none;
+    font-family: 'Trade Winds', cursive;
+}
+.header_acc a:hover{
+    color: orange;
+}
+.header_cart{
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.header_cart a{
+    font-size: 15px;
+    text-decoration: none;
+    font-family: 'Trade Winds', cursive;
+    color: red;
+}
+#header_reg ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 70%;
+    
+
+}
+#header_reg li{
+    list-style: none;
+    margin: 5px ;
+}
+#header_reg a{
+    text-decoration: none;
+    color: black;
+}
+#header_reg a:hover{
+    color: orange;
+}
+
+@media(max-width: 700px){
+    input[type=text]:focus{
+        width: 95%;
+    }
+    .second_input{
+        display: none;
+    }
+    #header_top{
+        display: none;
+    }
+}
+@media (min-width: 650px){
+.first-form input{
+    display: none;
+}
+.credetials{
+    display: none;
+}
+.header_nav{
+    display: none;
+}
+.header_nav{
+    display: none;
+}
+}
+
+@media(max-width:900px){
+.mesh_home{
+    font-size: 20px;
+}
+#header_top_nav input{
+    width: 300px;
+    border: 1px solid gray;
+    height: 30px;
+    border-radius: 5px;
+}
+.header-button{
+    border: transparent;
+    height: 30px;
+}
+}
+
+
+
+/* LOAD MORE
+ */
